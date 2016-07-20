@@ -320,7 +320,7 @@ input:checked + #info-mobile {
   margin: auto;
   background-size: contain;
   background-position: center;
-  padding: 11px 16px;
+  padding: 11px 16px 17px;
   background-image: linear-gradient(to right, #9a0202 0%, white 50%, #06f 100%);
 }
 
@@ -602,6 +602,13 @@ footer .copyright h3 a:hover {
     width: 60%;
     margin: 20px auto;
     text-align: left;
+  }
+}
+/*------------------------------------*/
+@media (min-width: 1024px) {
+  /* line 544, ../sass/main_styles.scss */
+  .site-content {
+    padding: 15px 32px 17px;
   }
 }
 /*------------------------------------*/

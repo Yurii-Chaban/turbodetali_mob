@@ -283,7 +283,7 @@ header {
 /*------------------------------------*/
 .site-content {
   @include site-container;
-  padding: 11px 16px;
+  padding: 11px 16px 17px;
   background-image: linear-gradient(to right, #9a0202 0%, white 50%, #06f 100%);
 }
 .main-page {
@@ -537,6 +537,12 @@ footer {
         text-align: left;
       }
     }
+  }
+}
+/*------------------------------------*/
+@media (min-width: 1024px) {
+  .site-content {
+    padding: 15px 32px 17px;
   }
 }
 /*------------------------------------*/
