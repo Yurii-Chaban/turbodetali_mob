@@ -33,49 +33,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-// @mixin direction {
-//   @include site-container;
-//   padding: 6px 0;
-//   background-color: #e1ddda;
-//   .arrow-back {
-//     float: left;
-//     margin: 5px 0 0 0;
-//   }
-//   .direction-title {
-//     margin: 0 auto;
-//     text-align: center;
-//     a {
-//       color: #8f8681;
-//       font: 400 15px / 25px 'Arial', sans-serif;
-//       text-transform: uppercase;
-//     }
-//   }
-// }
-// @mixin page-pagination {
-// 	@include site-container;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// 	width: 100%;
-// 	margin: 26px auto 31px;
-// 	text-align: center;
-// 	box-sizing: border-box;
-  
-// 	li {
-// 		display: inline-block;
-// 		margin: 0 5px;
-// 		a {
-// 			color: #908782;
-//       font: 400 22px / 20px 'PT Sans', sans-serif;
-// 			text-decoration: none;
-// 			@include transition;
-
-// 			&:hover {
-// 				color: #f37835;
-// 			}
-// 		}
-// 	}
-// }
 @mixin mapWrapper {
 	position: relative;
 	padding-bottom: 65.25%;
@@ -124,6 +81,7 @@ header {
 
 	.wrapper {
 		padding: 0 10px; 
+    position: relative;
 	}
 }
 .dropdovn-menu-mobile {
@@ -139,7 +97,7 @@ header {
     background-image: linear-gradient(to top, #850c0f 0%, #c40b09 100%);
 	  height: auto;
 	  top: -21px;
-	  left: -350px;
+	  left: -100%;
 	  transition: left .2s;
 	  z-index: 999;
 	  -webkit-transform: classZ(0);
@@ -253,7 +211,7 @@ header {
         clear:none;
         float: right;
         position: absolute;
-        top: 57px;
+        top: 36px;
         right: 0;
         z-index: 100;
         @include transition;
@@ -428,6 +386,7 @@ header {
 /*------------------------------------*/
 footer {
   @include site-container;
+  max-width: 960px;
   padding: 27px 0 19px 0;
   background-color: #f4f5f5;
   
@@ -435,6 +394,8 @@ footer {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
     li {
       display: block;
       width: 100%;
@@ -443,11 +404,11 @@ footer {
       overflow: hidden;
 
       .img-wrapper {
+        display: inline-block;
         max-width: 44px;
         width: 100%;
         max-height: 42px;
         height: 100%;
-        float: left;
         margin-right: 17px;
 
         img {
@@ -457,6 +418,8 @@ footer {
         }
       }
       h3 {
+        display: inline-block;
+        vertical-align: top;
         color: #942f1b;
         font: 700 25px / 35px 'Arial', sans-serif;
       }
@@ -484,6 +447,99 @@ footer {
         }
       }
     }
+  }
+}
+/*------------------------------------*/
+/*------------------------------------*/
+.contact-page {
+  @include site-container;
+
+  .wrapper {
+    padding: 15px;
+    background-color: white;
+  }
+  .blue-link-text {
+    color: #0e5da9;
+    font: 700 18px / 25px 'Arial', sans-serif;
+    font-style: italic;
+  }
+
+  .post-address {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    li {
+      display: block;
+      width: 100%;
+      margin: 20px auto;
+      text-align: left;
+
+      h3 {
+        margin-bottom: 5px;
+        font: 700 18px / 22px 'Arial', sans-serif;
+        color: #9c3d24;
+      }
+      p {
+        font: 400 18px / 22px 'Arial', sans-serif;
+        color: black;
+      }
+    }
+  }
+  .red-text {
+    color: #a73e23;
+    font: 400 18px / 22px 'Arial', sans-serif;
+  }
+  .blue-text {
+    margin: 26px auto 22px;
+    color: #0e5da9;
+    font-style: italic;
+    font-family: Arial;
+    font: 400 22px / 25px 'Arial', sans-serif;
+  }
+  p {
+    color: black;
+    font: 400 18px / 22px 'Arial', sans-serif;
+  }
+  .img-phone-list {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px auto;
+    text-align: center;
+
+    li {
+       display: block;
+      width: 100%;
+      margin: 15px auto;
+      text-align: center;
+    }
+  }
+  .mail-info {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    li {
+      display: block;
+      width: 100%;
+      margin: 15px auto 0;
+      text-align: left;
+      span {
+        color: black;
+        font: 400 18px / 22px 'Arial', sans-serif;
+      }
+    }
+  }
+  .invitation {
+    color: black;
+    font: 400 18px / 22px 'Arial', sans-serif;
+  }
+  .mapWrapper {
+    @include mapWrapper;
+    margin: 27px auto 17px;
   }
 }
 /*------------------------------------*/
@@ -524,17 +580,6 @@ footer {
             text-align: left;
           }
         }
-      }
-    }
-  }
-  footer {
-    .phone-list {
-      margin: 0 auto;
-      text-align: center;
-      li {
-        width: 60%;
-        margin: 20px auto;
-        text-align: left;
       }
     }
   }
